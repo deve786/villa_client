@@ -1,0 +1,36 @@
+import React from 'react'
+
+function Review() {
+    return (
+        <div className='p-6 flex lg:flex-row flex-col justify-center items-center'>
+            <div className='  flex flex-col justify-center md:w-1/2 relative md:left-6 z-10'>
+                <div className=' shadow-md p-5 md:mb-0 mb-5'>
+                    <h1 className='text-4xl font-semibold'>Customer Review</h1>
+                    <p className='text-lg'>
+                        Wise busy past both park when an ye no. Nay likely her length sooner thrown sex lively income. The expense windows adapted sir. Wrong widen drawn ample eat off doors money. Offending belonging promotion.
+                    </p>
+                    <ul className='ms-10 mt-8'>
+                        <li className='list-disc text-lg'>Placing assured be if removed it besides on.</li>
+                        <li className='list-disc text-lg'>Building mr concerns servants in he outlived am breeding.</li>
+                    </ul>
+
+                    <div className='flex items-center gap-5 mt-8'>
+                        <img src="./john.png" alt="" className='' />
+                        <div>
+                            <p id='customer_name' className='text-3xl font-normal'>John Smith</p>
+                            <p>CEO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='z-0'>
+                <img src="./building.png" alt="" />
+                <div className='relative left-1/2 bottom-1/2 w-fit'>
+                    <img src="./play_icon.png" alt="" className='w-12 cursor-pointer ' />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Review
