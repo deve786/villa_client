@@ -1,6 +1,13 @@
 import React from 'react'
 
 function Company() {
+    const company=[{
+        project:"400+",
+        client:"200+",
+        award:"90+"
+    }]
+
+    const comp=company[0]
     return (
         <div>
             <div className="h-screen bg-cover bg-center flex justify-center items-center text-white"
@@ -17,7 +24,7 @@ function Company() {
                 <div className='flex gap-2 items-center'>
                     <i class="fa-solid fa-city sm:text-4xl text-2xl"></i>
                     <div className='flex flex-col leading-3'>
-                        <p className='font-semibold md:text-3xl text-lg '>400+</p>
+                        <p className='font-semibold md:text-3xl text-lg '>{comp.project}</p>
                         <p className='md:font-semibold md:text-md text-sm leading-3'>Project Done</p>
                     </div>
                 </div>
@@ -25,7 +32,7 @@ function Company() {
                 <div className='flex gap-2 border-x-2 sm:px-10 px-3' >
                     <i class="fa-solid fa-user-group sm:text-4xl text-2xl"></i>
                     <div className='flex flex-col leading-3 gap-1'>
-                        <p className='font-semibold md:text-3xl text-lg'>200+</p>
+                        <p className='font-semibold md:text-3xl text-lg'>{comp.client}</p>
                         <p className='md:font-semibold md:text-md text-sm leading-3'>Client Handle</p>
                     </div>
                 </div>
@@ -33,7 +40,7 @@ function Company() {
                 <div className='flex gap-2 items-center'>
                     <i class="fa-solid fa-trophy sm:text-4xl text-2xl"></i>
                     <div className='flex flex-col leading-3'>
-                        <p className='font-semibold md:text-3xl text-lg'>90+</p>
+                        <p className='font-semibold md:text-3xl text-lg'>{comp.award}</p>
                         <p className='md:font-semibold md:text-md text-sm '>Award Won</p>
                     </div>
                 </div>
