@@ -60,8 +60,8 @@ function LauchPlaces() {
     ];
     return (
         <div className='flex flex-col gap-16'>
-            <div className="p-5 md:p-10 gap-10 flex lg:flex-row flex-col md:flex-row justify-center md:justify-between">
-                <div className="relative flex flex-col md:justify-center  mb-5  w-1/2 ">
+            <div className="p-5 md:p-10  flex lg:flex-row flex-col md:flex-row justify-center md:justify-between">
+                {/* <div className="relative flex flex-col md:justify-center  mb-5  w-1/2 ">
 
                     <div className="lg:absolute inset-0 w-full lg:h-full h-56 -left-28 md:left-0 ">
                         <Image src="/Rectangle 4.png" layout="fill" alt="Rectangle" className="object-contain" />
@@ -81,7 +81,41 @@ function LauchPlaces() {
                     </div>
                     <div className='absolute left-32 -bottom-10  lg:flex hidden justify-start w-full'><button className="py-1 px-4 w-fit items-center gap-1 border border-orange-600  ">View Demo </button></div>
 
+                </div> */}
+
+                <div className='relative flex flex-col md:justify-center  mb-5 w-full md:w-1/2'>
+                    <div className=" lg:absolute inset-0  md:justify-center mb-5">
+                        <Image
+                            src="/build1.png"
+                            layout="fill"
+                            alt="Rectangle"
+                            className="object-contain !static md:!w-[100%] !h-[100%]"
+                        />
+                        <div className="absolute  translate-x-1/2 translate-y-0 inset-0 w-32 h-16 md:w-40 md:h-40  z-20 flex items-center justify-center">
+                            <Image src="/Medallions.png" layout="fill" alt="Medallions" className="object-contain !static md:!w-[100%] md:!h-full !w-60 !h-24" />
+                            <div className='absolute text-white text-center'>
+                                <p className='font-semibold md:text-lg text-[12px]'>60 Lakh</p>
+                                <p className='md:text-lg text-[10px]'>Onwards</p>
+                            </div>
+                        </div>
+
+
+                        {/* <div className='absolute  translate-x-2/3 translate-y-[25%] inset-0  md:justify-center mb-5 w-1/2'>
+                            <Image
+                                src="/Medallions.png"
+                                layout="fill"
+                                alt="Medallions"
+                                className="object-contain !static md:!w-[50%] !w-[75%] "
+                            />
+                            <div className='text-white z-10 '>
+                                <p className='font-semibold text-lg'>75 Lakh</p>
+                                <p>Onwards</p>
+                            </div>
+                        </div> */}
+                    </div>
+
                 </div>
+
 
 
 
@@ -89,7 +123,7 @@ function LauchPlaces() {
                 <div className='flex items-center justify-start md:justify-start text-black md:text-left w-full md:w-1/2'>
                     <div className='flex justify-center flex-col gap-2 md:gap-4 w-full '>
                         <h1 className="text-3xl md:text-5xl font-semibold">
-                            Our Newly Launched <br/>Villa in <span className='text-blue-400'>Kazhakootam</span>
+                            Our Newly Launched <br />Villa in <span className='text-blue-400'>Kazhakootam</span>
                         </h1>
                         <p className='text-sm md:text-lg'>Indulge in Luxury with our Stunning Collection of Villas</p>
                         <ul className='flex flex-col gap-3'>
@@ -111,12 +145,12 @@ function LauchPlaces() {
                                 </button>
                             </div>
                             <div className='flex gap-2  md:flex-nowrap flex-wrap '>
-                            {images1.map(image => (
+                                {images1.map(image => (
                                     <Image src={image.src} layout="fill" alt={image.alt} className='w-28 h-auto max-w-full !relative !w-24' />
-                                        
+
                                 ))}
-                                
-                               
+
+
                             </div>
                         </div>
                     </div>
@@ -127,37 +161,43 @@ function LauchPlaces() {
             </div>
 
             <div className='p-5 md:p-10 flex flex-col md:flex-row justify-center md:justify-between'>
-                <div className='relative flex justify-start mb-5 md:mb-0 w-full md:w-1/2'>
-                    
-                    <div className="relative flex flex-col md:justify-center  mb-5  w-1/2 ">
-
-                        <div className="lg:absolute inset-0  w-full lg:h-full h-56 -left-28 md:left-0 ">
-                            <Image src="/launch11.png" layout="fill" alt="Rectangle" className="object-contain" />
-
-                        </div>
-
-                        <div className="lg:absolute w-full h-full lg:flex hidden relative inset-0 top-32 md:left-[70%] left-1/2 transform -translate-x-1/2 md:w-80 md:h-full md:top-32 z-10">
-                            <Image src="/launch12.png" layout="fill" alt="Image" className="object-contain" />
-                            <div className="lg:absolute relative lg:flex hidden inset-0 w-32 h-16 top-0 left-0 transform translate-y-0 translate-x-1/2 md:w-40 md:h-40 md:top-0 z-20  flex items-center justify-center">
-                                <div className='text-white z-10 '>
-                                    <p className='font-semibold text-lg'>75 Lakh</p>
-                                    <p>Onwards</p>
-                                </div>
-                                <Image src="/Medallions.png" layout="fill" alt="Medallions" className="object-contain " />
+                <div className='relative flex flex-col md:justify-center  mb-5 w-full md:w-1/2'>
+                    <div className=" lg:absolute inset-0  md:justify-center mb-5">
+                        <Image
+                            src="/build2.png"
+                            layout="fill"
+                            alt="Rectangle"
+                            className="object-contain !static md:!w-[100%] !h-[100%]"
+                        />
+                        <div className="absolute  translate-x-1/2 translate-y-0 inset-0 w-32 h-16 md:w-40 md:h-40  z-20 flex items-center justify-center">
+                            <Image src="/Medallions.png" layout="fill" alt="Medallions" className="object-contain !static md:!w-[100%] md:!h-full !w-60 !h-24" />
+                            <div className='absolute text-white text-center'>
+                                <p className='font-semibold md:text-lg text-[12px]'>70 Lakh</p>
+                                <p className='md:text-lg text-[10px]'>Onwards</p>
                             </div>
-
                         </div>
-                        <div className='absolute left-32 -bottom-10 lg:flex hidden justify-start w-full'><button className="py-1 px-4 w-fit items-center gap-1 border border-orange-600  ">View Demo </button></div>
 
+
+                        {/* <div className='absolute  translate-x-2/3 translate-y-[25%] inset-0  md:justify-center mb-5 w-1/2'>
+                            <Image
+                                src="/Medallions.png"
+                                layout="fill"
+                                alt="Medallions"
+                                className="object-contain !static md:!w-[50%] !w-[75%] "
+                            />
+                            <div className='text-white z-10 '>
+                                <p className='font-semibold text-lg'>75 Lakh</p>
+                                <p>Onwards</p>
+                            </div>
+                        </div> */}
                     </div>
 
-                    
                 </div>
 
                 <div className='flex gap-10 items-center justify-start md:justify-start text-black md:text-left w-full md:w-1/2'>
                     <div className='flex justify-center flex-col gap-2 md:gap-4 w-full '>
                         <h1 className="text-3xl md:text-5xl font-semibold">
-                            Our Newly Launched <br/> Villa in <span className='text-blue-400'>Thambanoor</span>
+                            Our Newly Launched <br /> Villa in <span className='text-blue-400'>Thambanoor</span>
                         </h1>
                         <p className='text-sm md:text-lg'>Indulge in Luxury with our Stunning Collection of Villas</p>
                         <ul className='flex flex-col gap-3'>
@@ -179,9 +219,9 @@ function LauchPlaces() {
                                 </button>
                             </div>
                             <div className='flex gap-2 md:flex-nowrap flex-wrap '>
-                            {images2.map(image => (
+                                {images2.map(image => (
                                     <Image src={image.src} layout="fill" alt={image.alt} className='w-28 h-auto max-w-full !relative !w-24' />
-                                        
+
                                 ))}
                             </div>
                         </div>
@@ -190,27 +230,25 @@ function LauchPlaces() {
             </div>
 
             <div className='bg-gray-100 gap-10 p-5 py-10 md:p-10 flex flex-col md:flex-row justify-center md:justify-between'>
-                <div className="relative flex justify-start mb-5 md:mb-0 w-full md:w-1/2">
-                <div className="relative w-32 h-32  lg:flex hidden ">
-                        <Image src="/Ellipse 12.png" alt="" layout="fill" objectFit="contain" />
-                    </div>
-                    <div className="relative w-96 h-96  lg:flex hidden">
-                        <Image src="/Ellipse 12.png" alt="" layout="fill" objectFit="contain" />
-                    </div>
+            <div className='relative flex flex-col md:justify-center  mb-5 w-full md:w-1/2'>
+                    
+                        <Image
+                            src="/ongoing.png"
+                            layout="fill"
+                            alt="Rectangle"
+                            className="object-contain !static md:!w-[100%]  !h-[100%]"
+                        />
+                        
 
-                    <div className="lg:absolute relative  w-48 z-10 top-0 md:left-52 left-0 -transform md:translate-x-1/2 translate-y-0 ">
-                        <Image src="/launch21.png" alt="" width={640} height={800} objectFit="contain" />
-                    </div>
 
-                    <div className="absolute w-72 hidden md:flex m left-44 transform translate-x-1/2 md:translate-x-1/2 md:left-0  bottom-12 md:top-40 z-20  lg:flex hidden">
-                        <Image src="/launch22.png" alt="" layout="fill" objectFit="contain" />
-                    </div>
+                        
+
                 </div>
 
                 <div className='flex items-center justify-start md:justify-start text-black md:text-left w-full md:w-1/2'>
                     <div className='flex justify-center flex-col gap-2 md:gap-4 w-full '>
                         <h1 className="text-3xl md:text-5xl font-semibold">
-                            Villa Construction,<br/> Now in <span className='text-blue-400'>Kovalam</span>
+                            Villa Construction,<br /> Now in <span className='text-blue-400'>Kovalam</span>
                         </h1>
                         <ul className='flex flex-col gap-3'>
                             <li className='flex gap-1 items-center text-lg font-semibold'><i className="fa-solid fa-circle text-blue-400"></i>Near to Padamanabha Swamy Temple</li>
