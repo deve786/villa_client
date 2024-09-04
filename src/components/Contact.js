@@ -44,7 +44,7 @@ function Contact({ sanityData }) {
                 </div>
 
                 <div className='flex gap-10 md:flex-row flex-col'>
-                    <div className='w-1/2'>
+                    <div className='md:w-1/2 w-full'>
                         <div className='flex items-center gap-4'>
                             <Image src="/email.png" layout='fill' className='!static !w-16 ' />
                             <div className='flex flex-col leading-4 gap-3'>
@@ -58,7 +58,7 @@ function Contact({ sanityData }) {
                         </div>
                     </div>
 
-                    <div className='w-1/2'>
+                    <div className='md:w-1/2 w-full'>
                         <div className='flex items-center gap-4'>
                             <Image src="/support.png" layout='fill' className='!static !w-16' />
                             <div className='flex flex-col leading-4 gap-3'>
