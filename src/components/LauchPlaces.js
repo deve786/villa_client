@@ -38,7 +38,7 @@ function LauchPlaces({ sanityData }) {
         <div className='relative flex flex-col gap-16 mt-16'>
             {
                 sanityData?.villas.map((villaData, index) =>
-                    <div key={index} className="relative pb-10 px-5 md:px-10 flex lg:flex-row flex-col md:flex-row justify-center md:justify-between z-10">
+                    <div key={index} className="relative pb-10 gap-5 px-5 md:px-10 flex lg:flex-row flex-col md:flex-row justify-center md:justify-between z-10">
                         <div className='relative flex flex-col md:justify-center mb-5 w-full md:w-1/2'>
                             <div className="lg:absolute inset-0 md:justify-center mb-5">
                                 <Image

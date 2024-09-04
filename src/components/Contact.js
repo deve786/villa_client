@@ -20,7 +20,7 @@ function Contact({ sanityData }) {
                                 <h1 className='font-semibold'>Our Location</h1>
                                 <div className='flex flex-col gap-1'>
                                     
-                                        <p  className='text-gray-700'>{sanityData?.contact?.location}</p>
+                                        <p  className='text-gray-700 text-wrap'>{sanityData?.contact?.location}</p>
                                     
 
                                 </div>
