@@ -25,7 +25,7 @@ function Banner() {
 
                     <p className='text-center text-2xl'>Indulge in Luxury with our Stunning Collection of Villas</p>
                 </div>
-                <button className='py-2 px-4 flex items-center gap-1 transition-all bg-orange-600 text-xl hover:bg-orange-700 group'>
+                <button onClick={scrollToContact} className='py-2 px-4 flex items-center gap-1 transition-all bg-orange-600 text-xl hover:bg-orange-700 group'>
                     <span className="transition-transform duration-300 group-hover:-translate-x-[2px]">
                         Enquire Now
                     </span>
@@ -39,7 +39,7 @@ function Banner() {
                         src="/Group 3.png"
                         fill
                         alt=""
-                        className="!static cursor-pointer transition-transform transform hover:scale-110 hover:opacity-80"
+                        className="!static cursor-pointer transition-transform transform hover:scale-110 hover:opacity-80 md:!w-full !w-10"
                     />
 
                     <Image src="/Group 2.png" fill alt="" className='!static cursor-pointer transition-transform transform hover:scale-110 hover:opacity-80' />

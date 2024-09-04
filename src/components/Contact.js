@@ -13,7 +13,7 @@ function Contact({ sanityData }) {
                     <p>Our support team is available for for 24/7.</p>
                 </div>
                 <div className='flex gap-10 md:flex-row flex-col'>
-                    <div className='w-1/2'>
+                    <div className='md:w-1/2 w-full'>
                         <div className='flex items-center gap-4  '>
                             <Image src="/location.png" layout='fill' className='!static !w-16 ' />
                             <div className='flex flex-col leading-4 gap-3'>
@@ -28,7 +28,7 @@ function Contact({ sanityData }) {
                         </div>
                     </div>
 
-                    <div className='w-1/2'>
+                    <div className='md:w-1/2 w-full'>
                         <div className='flex items-center gap-4'>
                             <Image src="/phone.png" layout='fill' className='!static !w-16' />
                             <div className='flex flex-col leading-4 gap-3'>
