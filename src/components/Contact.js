@@ -1,26 +1,10 @@
+import Image from 'next/image'
 import React from 'react'
 
-function Contact() {
-    const data = [{
-        location: {
-            address1: "907 N Randolph street,",
-            address2: "Denvar, United States"
-        },
-        phone: {
-            phone1: "+123 625 254 965",
-            phone2: "+854 526 481 856"
-        },
-        email: {
-            email1: "demo@gmail.com",
-            email2: "esample@gmail.com"
-        },
-        support: {
-            support1: "support@gmail.com",
-            support2: "example@gmail.com"
-        }
-    }]
+function Contact({ sanityData }) {
+    console.log(sanityData);
 
-    const contact = data[0]
+
     return (
         <div className='p-8 flex gap-10 flex-wrap lg:flex-nowrap justify-center'>
             <div className='flex gap-4 flex-col  '>
@@ -29,28 +13,28 @@ function Contact() {
                     <p>Our support team is available for for 24/7.</p>
                 </div>
                 <div className='flex gap-10 md:flex-row flex-col'>
-                    <div>
-                        <div className='flex items-center gap-4'>
-                            <i class="fa-solid rounded-full border py-5 px-6 fa-location-dot text-xl"></i>
+                    <div className='w-1/2'>
+                        <div className='flex items-center gap-4  '>
+                            <Image src="/location.png" layout='fill' className='!static !w-16 ' />
                             <div className='flex flex-col leading-4 gap-3'>
                                 <h1 className='font-semibold'>Our Location</h1>
                                 <div className='flex flex-col gap-1'>
-                                    {Object.values(contact.location).map((item, index) =>
-                                        <p key={index} className='text-gray-700'>{item}</p>
-                                    )}
+                                    
+                                        <p  className='text-gray-700'>{sanityData?.contact?.location}</p>
+                                    
 
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div className='w-1/2'>
                         <div className='flex items-center gap-4'>
-                            <i class="fa-solid rounded-full border py-5 px-6 fa-location-dot text-xl"></i>
+                            <Image src="/phone.png" layout='fill' className='!static !w-16' />
                             <div className='flex flex-col leading-4 gap-3'>
                                 <h1 className='font-semibold'>Our Phone</h1>
                                 <div className='flex flex-col gap-1'>
-                                    {Object.values(contact.phone).map((item, index) =>
+                                    {sanityData.contact.phone.map((item, index) =>
                                         <p key={index} className='text-gray-700'>{item}</p>
                                     )}
                                 </div>
@@ -59,14 +43,14 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className='flex gap-14 md:flex-row flex-col'>
-                    <div>
+                <div className='flex gap-10 md:flex-row flex-col'>
+                    <div className='w-1/2'>
                         <div className='flex items-center gap-4'>
-                            <i class="fa-solid rounded-full border py-5 px-6 fa-location-dot text-xl"></i>
+                            <Image src="/email.png" layout='fill' className='!static !w-16 ' />
                             <div className='flex flex-col leading-4 gap-3'>
                                 <h1 className='font-semibold'>Our E-mail</h1>
                                 <div className='flex flex-col gap-1'>
-                                    {Object.values(contact.email).map((item, index) =>
+                                    {sanityData.contact.email.map((item, index) =>
                                         <p key={index} className='text-gray-700'>{item}</p>
                                     )}
                                 </div>
@@ -74,13 +58,13 @@ function Contact() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className='w-1/2'>
                         <div className='flex items-center gap-4'>
-                            <i class="fa-solid rounded-full border py-5 px-6 fa-location-dot text-xl"></i>
+                            <Image src="/support.png" layout='fill' className='!static !w-16' />
                             <div className='flex flex-col leading-4 gap-3'>
                                 <h1 className='font-semibold'>Our Support</h1>
                                 <div className='flex flex-col gap-1'>
-                                    {Object.values(contact.support).map((item, index) =>
+                                    {sanityData.contact.support.map((item, index) =>
                                         <p key={index} className='text-gray-700'>{item}</p>
                                     )}
                                 </div>

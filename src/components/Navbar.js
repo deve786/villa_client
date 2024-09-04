@@ -1,13 +1,14 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 function Navbar() {
   return (
-    <nav className=" text-white p-4 px-8">
+    <nav className=" text-white p-4 md:px-8 px-4 z-40 relative flex">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo and Branding */}
         <div className="flex items-center space-x-3">
-          <img src="/logo.png" alt="Logo" className="h-14" />
+          <Image src="/logo.png" layout='fill' alt="Logo" className="md:!h-14 md:!w-14 !static !w-8 !h-8" />
           <Link href='/'>
             <div className="flex flex-col leading-3">
               <p className="uppercase md:text-2xl text-lg font-extrabold">Absolute</p>

@@ -6,14 +6,14 @@ import Review from './Review'
 import Contact from './Contact'
 import Footer from './Footer'
 
-function Layout() {
+function Layout({sanityData}) {
   return (
     <div>
       <Banner />
-      <LauchPlaces />
-      <Company />
+      <LauchPlaces sanityData={sanityData} />
+      <Company sanityData={sanityData} />
       <Review />
-      <Contact/>
+      <Contact sanityData={sanityData} />
       <Footer/>
     </div>
   )
