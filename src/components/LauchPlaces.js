@@ -3,7 +3,12 @@ import React from 'react';
 import { sanityClient } from "@/components/lib/sanity";
 
 function LauchPlaces({ sanityData }) {
-
+    const scrollToContact = () => {
+        const contactSection = document.getElementById('contact-section');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     console.log(sanityData);
 
     // Function to handle section toggle
@@ -22,6 +27,7 @@ function LauchPlaces({ sanityData }) {
         } else {
             exteriorSection.classList.add('hidden');
             interiorSection.classList.remove('hidden');
+            interiorSection.classList.add('flex');
             interiorButton.classList.add('text-orange-600', 'border-orange-600', 'border-b-2');
             exteriorButton.classList.remove('text-orange-600', 'border-orange-600', 'border-b-2');
             exteriorButton.classList.add('text-slate-500');
@@ -66,7 +72,7 @@ function LauchPlaces({ sanityData }) {
                                     ))}
                                 </ul>
 
-                                <button className='py-2 px-4 flex w-fit text-white items-center gap-1 bg-orange-600 text-xl hover:bg-orange-700'>
+                                <button onClick={scrollToContact} className='py-2 px-4 flex w-fit text-white items-center gap-1 bg-orange-600 text-xl hover:bg-orange-700'>
                                     Enquire Now
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
@@ -75,28 +81,28 @@ function LauchPlaces({ sanityData }) {
 
                                 <div>
                                     <div className='flex border-b border-gray-200 mb-4'>
-                                        <button id={`exterior-button-${index}`} className='py-2 px-4 -mb-px font-medium text-md transition-colors duration-300 text-orange-600 border-orange-600 border-b-2'
+                                        <button id={`exterior-button-${index}`}
+                                            className='py-2 px-4 -mb-px font-medium text-md transition-colors duration-300 text-orange-600 border-orange-600 border-b-2'
                                             onClick={() => handleSectionToggle(index, 'exterior')}>
                                             Exteriors
                                         </button>
-                                        <button id={`interior-button-${index}`} className='py-2 px-4 -mb-px font-medium text-md text-slate-500 transition-colors duration-300'
-                                            onClick={() => handleSectionToggle(index, 'interior')}>
+                                        <button id={`interior-button-${index}`}
+                                            className='py-2 px-4 -mb-px font-medium text-md transition-colors duration-300 text-slate-500' onClick={() =>
+                                                handleSectionToggle(index, 'interior')}>
                                             Interiors
                                         </button>
                                     </div>
-
-
-                                    <div id={`exterior-section-${index}`} className='flex gap-2 md:flex-nowrap flex-wrap'>
+                                    <div id={`exterior-section-${index}`} className="flex flex-wrap gap-2">
                                         {Array.isArray(villaData?.exterior) && villaData.exterior.map((image) => (
                                             <Image key={image.id} src={image.url} layout="responsive" width={100} height={100} alt={image.alt} className=' !h-auto max-w-full !relative !w-24' />
                                         ))}
+                                        
                                     </div>
-
-
-                                    <div id={`interior-section-${index}`} className='flex gap-2 md:flex-nowrap flex-wrap '>
+                                    <div id={`interior-section-${index}`} className="hidden  flex-wrap gap-2">
                                         {Array.isArray(villaData?.interior) && villaData.interior.map((image) => (
                                             <Image key={image.id} src={image.url} layout="responsive" width={100} height={100} alt={image.alt} className=' !h-auto max-w-full !relative !w-24' />
                                         ))}
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +113,7 @@ function LauchPlaces({ sanityData }) {
 
                         </div>
                         {index % 2 === 0 && (
-                            <div className='absolute bottom-0 left-0 md:flex hidden z-0'>
+                            <div className='absolute -bottom-14 left-0 md:flex hidden z-0'>
                                 <Image src='/Rectangle 11.png' fill className='object-contain inset-0 !h-28 !relative top-0' />
                             </div>
                         )}

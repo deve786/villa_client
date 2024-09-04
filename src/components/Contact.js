@@ -6,7 +6,7 @@ function Contact({ sanityData }) {
 
 
     return (
-        <div className='p-8 flex gap-10 flex-wrap lg:flex-nowrap justify-center'>
+        <div id="contact-section" className='p-8 py-28 flex gap-10 flex-wrap lg:flex-nowrap justify-center'>
             <div className='flex gap-4 flex-col  '>
                 <div>
                     <p>If you have any quires or have any project fill free to contact us.</p>

@@ -3,6 +3,12 @@ import Navbar from './Navbar';
 import Image from 'next/image';
 
 function Banner() {
+    const scrollToContact = () => {
+        const contactSection = document.getElementById('contact-section');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url('./banner.png')` }}>
 
@@ -19,7 +25,7 @@ function Banner() {
 
                     <p className='text-center text-2xl'>Indulge in Luxury with our Stunning Collection of Villas</p>
                 </div>
-                <button className='py-2 px-4 flex items-center gap-1 transition-all	     bg-orange-600 text-xl hover:bg-orange-700'>
+                <button onClick={scrollToContact} className='py-2 px-4 flex items-center gap-1 transition-all	     bg-orange-600 text-xl hover:bg-orange-700'>
                     Enquire Now
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />

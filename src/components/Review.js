@@ -7,10 +7,10 @@ function Review({sanityData}) {
     
 
     return (
-        <div className='p-6 '>
+        <div className='p-6 py-8'>
             <div className='flex lg:flex-row flex-col justify-center items-center'>
                 <div className='  flex flex-col justify-center md:w-1/2 relative md:left-10 z-50'>
-                    <div className='bg-white border lg:p-20 p-8 md:mb-0 mb-5 z-50'>
+                    <div className='bg-white border lg:p-20 p-8 mb-0 md:mb-0 z-50'>
                         <h1 className='lg:text-4xl text-2xl font-semibold'>Customer Review</h1>
                         <p className='lg:text-lg text-md'>
                             {sanityData?.review?.customerReview}                    </p>
@@ -30,7 +30,7 @@ function Review({sanityData}) {
                             </div>
                         </div>
                     </div>
-                    <div className='mt-10 flex justify-end gap-3 items-end mr-14 mb-4'>
+                    <div className='md:mt-10 mt-3 flex justify-end gap-3 items-end mr-14 mb-4'>
                         <div className='gap-3 flex w-fit group'>
                             <i className="fa-solid fa-angle-left text-orange-600 cursor-pointer border-2 border-orange-600 rounded-full py-1.5 px-2.5 transform transition-transform duration-300 group-hover:-translate-x-0.5"></i>
                         </div>
@@ -43,7 +43,7 @@ function Review({sanityData}) {
                     </div>
                 </div>
 
-                <div className=' w-1/2 h-1/2 '>
+                <div className=' md:w-1/2 h-1/2 w-full'>
                     <Image fill src="/building.png" alt="" className='!w-full !h-full !static' />
                     <div className='relative left-1/2 bottom-1/2 w-fit '>
                         <Image fill src="/play_icon.png" alt="" className='!h-fit !w-12 !flex cursor-pointer ' />
