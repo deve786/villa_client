@@ -5,14 +5,16 @@ import Company from './Company'
 import Review from './Review'
 import Contact from './Contact'
 import Footer from './Footer'
+import Construction from './Construction'
 
 function Layout({sanityData}) {
   return (
     <div>
       <Banner />
       <LauchPlaces sanityData={sanityData} />
+      <Construction sanityData={sanityData} />
       <Company sanityData={sanityData} />
-      <Review />
+      <Review sanityData={sanityData} />
       <Contact sanityData={sanityData} />
       <Footer/>
     </div>

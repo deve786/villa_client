@@ -28,17 +28,17 @@ function Banner() {
                 <div className='flex flex-col gap-4 absolute right-2'>
                     <Image
                         src="/Group 3.png"
-                        layout="fill"
+                        fill
                         alt=""
                         className="!static cursor-pointer transition-transform transform hover:scale-110 hover:opacity-80"
                     />
 
-                    <Image src="/Group 2.png" layout="fill" alt="" className='!static cursor-pointer transition-transform transform hover:scale-110 hover:opacity-80' />
+                    <Image src="/Group 2.png" fill alt="" className='!static cursor-pointer transition-transform transform hover:scale-110 hover:opacity-80' />
 
 
                     <Image
                         src="/Group 1.png"
-                        layout="fill"
+                        fill
                         className="!static cursor-pointer transition-transform transform hover:scale-110 hover:opacity-80"
                     />
 

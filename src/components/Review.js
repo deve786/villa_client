@@ -1,18 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
 
-function Review() {
-    const data = [{
-        customerReview: "Wise busy past both park when an ye no. Nay likely her length sooner thrown sex lively income. The expense windows adapted sir. Wrong widen drawn ample eat off doors money. Offending belonging promotion.",
-        customerDes: {
-            desc1: "Placing assured be if removed it besides on",
-            desc2: "Building mr concerns servants in he outlived am breeding."
-        },
-        customerImage: "/john.png",
-        customerName: "John Smith",
-        position: 'CEO'
-    }]
-    const customer = data[0]
+function Review({sanityData}) {
+    console.log(sanityData);
+    
+    
 
     return (
         <div className='p-6 '>
@@ -21,20 +13,20 @@ function Review() {
                     <div className='bg-white border lg:p-20 p-8 md:mb-0 mb-5 z-50'>
                         <h1 className='lg:text-4xl text-2xl font-semibold'>Customer Review</h1>
                         <p className='lg:text-lg text-md'>
-                            {customer.customerReview}                    </p>
+                            {sanityData?.review?.customerReview}                    </p>
                         <ul className='ms-10 mt-8'>
 
-                            {Object.values(customer.customerDes).map((item, index) =>
+                            {sanityData.review.customerDes.map((item, index) =>
                                 <li key={index} className='list-disc text-lg'>{item}</li>
                             )}
 
                         </ul>
 
                         <div className='flex items-center gap-5 mt-8'>
-                            <Image src={customer.customerImage} layout="fill" alt="" className='!w-24 !h-24 !static' />
+                            <Image src={sanityData.review.customerImage} fill alt="" className='!w-24 !h-24 !static' />
                             <div>
-                                <p id='customer_name' className='text-3xl font-normal'>{customer.customerName}</p>
-                                <p>{customer.position}</p>
+                                <p id='customer_name' className='text-3xl font-normal'>{sanityData.review.customerName}</p>
+                                <p>{sanityData.review.position}</p>
                             </div>
                         </div>
                     </div>
@@ -52,9 +44,9 @@ function Review() {
                 </div>
 
                 <div className=' w-1/2 h-1/2 '>
-                    <Image layout="fill" src="/building.png" alt="" className='!w-full !h-full !static' />
+                    <Image fill src="/building.png" alt="" className='!w-full !h-full !static' />
                     <div className='relative left-1/2 bottom-1/2 w-fit '>
-                        <Image layout="fill" src="/play_icon.png" alt="" className='!h-fit !w-12 !flex cursor-pointer ' />
+                        <Image fill src="/play_icon.png" alt="" className='!h-fit !w-12 !flex cursor-pointer ' />
                     </div>
                 </div>
             </div>

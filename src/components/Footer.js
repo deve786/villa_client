@@ -2,7 +2,10 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='bg-black text-white md:px-10 px-5 pt-12 pb-7'>
+    <div 
+    className='bg-black text-white px-5 pt-12 pb-7 md:px-10 bg-cover bg-center'
+    style={{ backgroundImage: `url('./footer_banner.png')` }}
+>
         <div className=' flex flex-col gap-10'>
             <div className='flex flex-col gap-10 md:px-20' >
                 <div >
@@ -41,7 +44,8 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            
+            <hr className="border-t-[1px] border-gray-500" />
+
             <div className='flex text-gray-400 justify-between md:flex-row flex-col'>
                 <p>@2024. All rights reserved.</p>
                 <ul className='flex md:gap-5 gap-3'>

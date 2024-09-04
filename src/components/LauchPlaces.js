@@ -29,20 +29,20 @@ function LauchPlaces({ sanityData }) {
     };
 
     return (
-        <div className='relative flex flex-col gap-16'>
+        <div className='relative flex flex-col gap-16 mt-16'>
             {
                 sanityData?.villas.map((villaData, index) =>
-                    <div key={index} className="relative p-5 md:p-10 flex lg:flex-row flex-col md:flex-row justify-center md:justify-between z-10">
+                    <div key={index} className="relative pb-10 px-5 md:px-10 flex lg:flex-row flex-col md:flex-row justify-center md:justify-between z-10">
                         <div className='relative flex flex-col md:justify-center mb-5 w-full md:w-1/2'>
                             <div className="lg:absolute inset-0 md:justify-center mb-5">
                                 <Image
                                     src={villaData?.bannerImage}
-                                    layout="fill"
+                                    fill
                                     alt="Rectangle"
                                     className="object-contain !static md:!w-[100%] !h-[100%]"
                                 />
                                 <div className="absolute translate-x-1/2 translate-y-0 inset-0 w-32 h-16 md:w-40 md:h-40 z-20 flex items-center justify-center">
-                                    <Image src="/Medallions.png" layout="fill" alt="Medallions" className="object-contain !static md:!w-[100%] md:!h-full !w-60 !h-24" />
+                                    <Image src="/Medallions.png" fill alt="Medallions" className="object-contain !static md:!w-[100%] md:!h-full !w-60 !h-24" />
                                     <div className='absolute text-white text-center'>
                                         <p className='font-semibold md:text-lg text-[12px]'>{villaData?.price}</p>
                                         <p className='md:text-lg text-[10px]'>Onwards</p>
@@ -88,59 +88,40 @@ function LauchPlaces({ sanityData }) {
 
                                     <div id={`exterior-section-${index}`} className='flex gap-2 md:flex-nowrap flex-wrap'>
                                         {Array.isArray(villaData?.exterior) && villaData.exterior.map((image) => (
-                                            <Image key={image.id} src={image.url} layout="responsive" width={100} height={100} alt={image.alt} className='w-28 h-auto max-w-full !relative !w-24' />
+                                            <Image key={image.id} src={image.url} layout="responsive" width={100} height={100} alt={image.alt} className=' !h-auto max-w-full !relative !w-24' />
                                         ))}
                                     </div>
 
 
-                                    <div id={`interior-section-${index}`} className='flex gap-2 md:flex-nowrap flex-wrap hidden'>
+                                    <div id={`interior-section-${index}`} className='flex gap-2 md:flex-nowrap flex-wrap '>
                                         {Array.isArray(villaData?.interior) && villaData.interior.map((image) => (
-                                            <Image key={image.id} src={image.url} layout="responsive" width={100} height={100} alt={image.alt} className='w-28 h-auto max-w-full !relative !w-24' />
+                                            <Image key={image.id} src={image.url} layout="responsive" width={100} height={100} alt={image.alt} className=' !h-auto max-w-full !relative !w-24' />
                                         ))}
                                     </div>
                                 </div>
                             </div>
 
                             <div className='absolute right-0 top-0 z-0 md:flex hidden'>
-                                <Image src='/side.png' layout="fill" className='object-contain inset-0 h-24 !static' />
+                                <Image src='/side.png' fill className='object-contain inset-0 h-24 !static' />
                             </div>
 
                         </div>
+                        {index % 2 === 0 && (
+                            <div className='absolute bottom-0 left-0 md:flex hidden z-0'>
+                                <Image src='/Rectangle 11.png' fill className='object-contain inset-0 !h-28 !relative top-0' />
+                            </div>
+                        )}
+                        {index % 2 !== 0 && (
+                            <div className='absolute -bottom-14 right-0 md:flex hidden z-0'>
+                                <Image src='/Rectangle 12.png' fill className='object-contain inset-0 !h-28 !relative top-0' />
+                            </div>
+                        )}
                     </div>
                 )
             }
-            <div className='absolute top-0 md:flex hidden z-0'>
-                <Image src='/Rectangle 11.png' layout="fill" className='object-contain inset-0 !h-28 !relative top-40' />
-            </div>
-            <div className='bg-gray-100 gap-10 p-5 py-10 md:p-10 flex flex-col md:flex-row justify-center md:justify-between'>
-                <div className='relative flex flex-col md:justify-center mb-5 w-full md:w-1/2'>
-                    <Image
-                        src={sanityData?.construction?.bannerImage}
-                        layout="fill"
-                        alt="Rectangle"
-                        className="object-contain !static md:!w-[100%] !h-[100%]"
-                    />
-                </div>
 
-                <div className='flex items-center justify-start md:justify-start text-black md:text-left w-full md:w-1/2'>
-                    <div className='flex justify-center flex-col gap-2 md:gap-4 w-full '>
-                        <h1 className="text-3xl md:text-5xl font-semibold">
-                            {sanityData?.construction?.head?.text} <span className='text-blue-400'>{sanityData?.construction?.head?.span} </span>
-                        </h1>
-                        <ul className='flex flex-col gap-3'>
-                            <ul className='flex flex-col gap-3'>
-                                {Array.isArray(sanityData?.construction?.description) && sanityData?.construction?.description.map((item, index) => (
-                                    <li key={index} className='flex gap-1 items-center md:text-lg text-md font-semibold'>
-                                        <i className="fa-solid fa-circle text-sm text-blue-400"></i>{item}
-                                    </li>
-                                ))}
-                            </ul>
 
-                        </ul>
-                        <button className='py-1 transition ease-in-out duration-300	 px-4 flex text-lg w-fit items-center gap-1 border border-orange-600 hover:bg-orange-600 hover:text-white text-orange-600'>View Demo </button>
-                    </div>
-                </div>
-            </div>
+
         </div>
     );
 }

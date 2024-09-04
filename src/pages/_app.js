@@ -54,6 +54,15 @@ App.getInitialProps = async () => {
     phone,
     email,
     support
+  },
+  review{
+  
+  customerReview,
+  customerDes,
+  "customerImage": customerImage.asset->url,
+  customerName,
+  position,
+
   }
 }
 
