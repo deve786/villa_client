@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
 
-function Review({sanityData}) {
+function Review({ sanityData }) {
     console.log(sanityData);
-    
-    
+
+
 
     return (
         <div className='p-6 py-8'>
@@ -43,12 +43,14 @@ function Review({sanityData}) {
                     </div>
                 </div>
 
-                <div className=' md:w-1/2 h-1/2 w-full'>
+                <div className='relative md:w-1/2 h-1/2 w-full'>
                     <Image fill src="/building.png" alt="" className='!w-full !h-full !static' />
-                    <div className='relative left-1/2 bottom-1/2 w-fit '>
-                        <Image fill src="/play_icon.png" alt="" className='!h-fit !w-12 !flex cursor-pointer ' />
+                    {/* Play Button */}
+                    <div className='absolute inset-0 flex items-center justify-center'>
+                        <Image src="/play_icon.png" alt="Play" width={48} height={48} className='cursor-pointer' />
                     </div>
                 </div>
+
             </div>
 
         </div>

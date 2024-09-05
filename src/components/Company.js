@@ -9,7 +9,7 @@ function Company({ sanityData }) {
             <div className="h-screen bg-cover bg-center flex justify-center items-center text-white"
                 style={{ backgroundImage: `url('./banner.png')` }}>
                 <div className='flex flex-col items-center gap-5'>
-                    <img src="./company_icon.png" alt="" className='w-56' />
+                    <Image src="/company_icon.png" quality={100} priority unoptimized  layout='fill' alt="" className='!w-56 !static' />
                     <div className='flex flex-col items-center gap-3'>
                         <p className='md:text-3xl text-xl text-center'>The Responsible Builder of Kerala</p>
                         <img src="./play_icon.png" alt="" className='w-16 cursor-pointer' />

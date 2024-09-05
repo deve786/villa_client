@@ -26,7 +26,7 @@ function Navbar() {
     <nav className="text-white p-4 md:px-8 px-4 z-40 relative flex flex-col">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <Image src="/logo.svg"  layout='fill' alt="Logo" className="md:!h-14 md:!w-14 !static !w-8 !h-8" />
+          <Image src="/logo.png" quality={100} priority unoptimized layout='fill' alt="Logo" className="md:!h-14 md:!w-14 !static !w-8 !h-8" />
           <Link href='#'>
             <div className="flex flex-col leading-3">
               <p className="uppercase md:text-2xl text-lg font-extrabold">Absolute</p>
