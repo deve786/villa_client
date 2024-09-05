@@ -22,16 +22,16 @@ App.getInitialProps = async () => {
   const query = `*[_type == "home"][0]{
   construction {
     head {
-      text,
-      span
+      heading,
+      location
     },
     description,
     "bannerImage": bannerImage.asset->url,
   },
   villas[]{
     head {
-      text,
-      span
+      heading,
+      location
     },
     subhead,
     description,

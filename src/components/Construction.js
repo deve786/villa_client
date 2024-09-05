@@ -18,7 +18,7 @@ function Construction({ sanityData }) {
                 <div className='flex items-center justify-start md:justify-start text-black md:text-left w-full md:w-1/2'>
                     <div className='flex justify-center flex-col gap-2 md:gap-4 w-full '>
                         <h1 className="text-3xl md:text-5xl font-semibold">
-                            {sanityData?.construction?.head?.text} <span className='text-blue-400'>{sanityData?.construction?.head?.span} </span>
+                            {sanityData?.construction?.head?.heading} <span className='text-blue-400'>{sanityData?.construction?.head?.place} </span>
                         </h1>
                         <ul className='flex flex-col gap-3'>
                             <ul className='flex flex-col gap-3'>

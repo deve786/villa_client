@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import { sanityClient } from "@/components/lib/sanity";
 
 function LauchPlaces({ sanityData }) {
     const scrollToContact = () => {
@@ -60,8 +59,8 @@ function LauchPlaces({ sanityData }) {
                         <div className='flex items-center justify-start md:justify-start text-black md:text-left w-full md:w-1/2'>
                             <div className='flex justify-center flex-col gap-2 md:gap-4 w-full'>
                                 <h1 className="text-3xl md:text-5xl font-semibold w-2/3">
-                                    {villaData?.head?.text}
-                                    <span className='text-blue-400'>{villaData?.head?.span}</span>
+                                    {villaData?.head?.heading}
+                                    <span className='text-blue-400'>{villaData?.head?.location}</span>
                                 </h1>
                                 <p className='text-sm md:text-lg'>{villaData?.subhead}</p>
                                 <ul className='flex flex-col gap-3'>
