@@ -16,7 +16,7 @@ function Review({sanityData}) {
                             {sanityData?.review?.customerReview}                    </p>
                         <ul className='ms-10 mt-8'>
 
-                            {sanityData.review.customerDes.map((item, index) =>
+                            {sanityData?.review?.customerDes.map((item, index) =>
                                 <li key={index} className='list-disc text-lg'>{item}</li>
                             )}
 

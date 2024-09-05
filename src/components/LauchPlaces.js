@@ -35,7 +35,7 @@ function LauchPlaces({ sanityData }) {
     };
 
     return (
-        <div className='relative flex flex-col gap-16 mt-16'>
+        <div id="projects" className='relative flex flex-col gap-16 mt-16'>
             {
                 sanityData?.villas.map((villaData, index) =>
                     <div key={index} className="relative pb-10 gap-5 px-5 md:px-10 flex lg:flex-row flex-col md:flex-row justify-center md:justify-between z-10">

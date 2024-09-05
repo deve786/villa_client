@@ -5,7 +5,7 @@ function Company({ sanityData }) {
 
 
     return (
-        <div>
+        <div id='about'>
             <div className="h-screen bg-cover bg-center flex justify-center items-center text-white"
                 style={{ backgroundImage: `url('./banner.png')` }}>
                 <div className='flex flex-col items-center gap-5'>

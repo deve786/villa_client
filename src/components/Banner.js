@@ -39,7 +39,7 @@ function Banner() {
                         src="/Group 3.png"
                         fill
                         alt=""
-                        className="!static cursor-pointer transition-transform transform hover:scale-110 hover:opacity-80 md:!w-full !w-10"
+                        className="!static cursor-pointer transition-transform transform hover:scale-110 hover:opacity-80  !w-10"
                     />
 
                     <Image src="/Group 2.png" fill alt="" className='!static cursor-pointer transition-transform transform hover:scale-110 hover:opacity-80' />

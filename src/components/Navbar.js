@@ -3,6 +3,16 @@ import Link from 'next/link';
 import React, { useRef } from 'react';
 
 function Navbar() {
+
+
+  const clickFunction = () => {
+    
+    const mobileLinks = document.getElementsByClassName('mobile-links');
+    Array.from(mobileLinks).forEach(link => {
+      mobileMenuRef.current.classList.add('hidden'); 
+    });
+  };
+
   const mobileMenuRef = useRef(null);
 
   const toggleMobileMenu = () => {
@@ -16,8 +26,8 @@ function Navbar() {
     <nav className="text-white p-4 md:px-8 px-4 z-40 relative flex flex-col">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <Image src="/logo.png" layout='fill' alt="Logo" className="md:!h-14 md:!w-14 !static !w-8 !h-8" />
-          <Link href='/'>
+          <Image src="/logo.svg"  layout='fill' alt="Logo" className="md:!h-14 md:!w-14 !static !w-8 !h-8" />
+          <Link href='#'>
             <div className="flex flex-col leading-3">
               <p className="uppercase md:text-2xl text-lg font-extrabold">Absolute</p>
               <p className="uppercase md:text-xs text-[10px] font-semibold">
@@ -29,10 +39,10 @@ function Navbar() {
 
 
         <div className="hidden md:flex space-x-5 justify-end">
-          <Link href="/" className="hover:text-orange-400">Home</Link>
-          <Link href="/about" className="hover:text-orange-400">About Us</Link>
-          <Link href="/projects" className="hover:text-orange-400">Projects</Link>
-          <Link href="/contact" className="hover:text-orange-400">Contact Us</Link>
+          <Link href="#" className="hover:text-orange-400">Home</Link>
+          <Link href="#about" className="hover:text-orange-400">About Us</Link>
+          <Link href="#projects" className="hover:text-orange-400">Projects</Link>
+          <Link href="#contact-section" className="hover:text-orange-400 ">Contact Us</Link>
         </div>
 
         <button onClick={toggleMobileMenu} className="md:hidden text-white focus:outline-none">
@@ -45,12 +55,13 @@ function Navbar() {
 
       <div ref={mobileMenuRef} className="md:hidden fixed inset-0  top-14 mt-4 hidden justify-center overflow-y-auto">
         <ul className="space-y-4">
-          <li><Link href="/" className="block text-orange-600 hover:text-orange-400">Homes</Link></li>
-          <li><Link href="/about" className="block hover:text-orange-400">About Us</Link></li>
-          <li><Link href="/projects" className="block hover:text-orange-400">Projects</Link></li>
-          <li><Link href="/contact" className="block hover:text-orange-400">Contact Us</Link></li>
+          <li><Link onClick={clickFunction} href="#" className="mobile-links block text-orange-600 hover:text-orange-400">Homes</Link></li>
+          <li><Link onClick={clickFunction} href="#about" className="mobile-links block hover:text-orange-400">About Us</Link></li>
+          <li><Link  onClick={clickFunction} href="#projects" className=" mobile-links block hover:text-orange-400">Projects</Link></li>
+          <li><Link  onClick={clickFunction} href="#contact-section" className="mobile-links block hover:text-orange-400">Contact Us</Link></li>
         </ul>
       </div>
+
     </nav>
   );
 }
