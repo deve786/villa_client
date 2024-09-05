@@ -5,7 +5,7 @@ function Contact({ sanityData }) {
     console.log(sanityData);
 
     return (
-        <div id="contact-section" className="md:p-8 p-3 py-28 grid gap-10 lg:grid-cols-2 lg:gap-16">
+        <div id="contact-section" className="md:p-8 p-3 md:py-32 py-16 grid gap-10 lg:grid-cols-2 lg:gap-16">
             
             <div className="grid grid-cols-1 gap-10">
                 <div>
