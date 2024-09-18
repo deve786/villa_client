@@ -23,14 +23,14 @@ function Navbar() {
   };
 
   return (
-    <nav className="text-white p-4 md:px-8 px-4 z-40 relative flex flex-col">
+    <nav className="text-black p-4 md:px-16 px-4 z-40 relative flex flex-col">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <Image src="/logo.png" quality={100} priority unoptimized layout='fill' alt="Logo" className="md:!h-14 md:!w-14 !static !w-8 !h-8" />
+          <Image src="/logo.png" quality={100} priority unoptimized layout='fill' alt="Logo" className="md:!h-12 md:!w-12 !static !w-8 !h-8" />
           <Link href='#'>
             <div className="flex flex-col leading-3">
-              <p className="uppercase md:text-2xl text-lg font-extrabold">Absolute</p>
-              <p className="uppercase md:text-xs text-[10px] font-semibold">
+              <p className="uppercase md:text-xl text-lg font-extrabold">Absolute</p>
+              <p className="uppercase md:text-xxs text-[10px] font-semibold">
                 Builder and Developers (P) LTD
               </p>
             </div>
@@ -38,11 +38,11 @@ function Navbar() {
         </div>
 
 
-        <div className="hidden md:flex space-x-5 justify-end">
-          <Link href="#" className="hover:text-orange-400">Home</Link>
-          <Link href="#about" className="hover:text-orange-400">About Us</Link>
-          <Link href="#projects" className="hover:text-orange-400">Projects</Link>
-          <Link href="#contact-section" className="hover:text-orange-400 ">Contact Us</Link>
+        <div className="text-gray-400 hidden md:flex space-x-8 justify-end">
+          <Link href="#" className="text-orange-400 font-semibold">Home</Link>
+          <Link href="#about" className="hover:text-orange-400 font-semibold">About Us</Link>
+          <Link href="#projects" className="hover:text-orange-400 font-semibold">Projects</Link>
+          <Link href="#contact-section" className="hover:text-orange-400 font-semibold ">Contact Us</Link>
         </div>
 
         <button onClick={toggleMobileMenu} className="md:hidden text-white focus:outline-none">
