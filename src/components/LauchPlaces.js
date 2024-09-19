@@ -8,7 +8,7 @@ function LauchPlaces({ sanityData }) {
             contactSection.scrollIntoView({ behavior: 'smooth' });
         }
     };
-    console.log(sanityData);
+    // console.log(sanityData);
 
     // Function to handle section toggle
     const handleSectionToggle = (index, section) => {

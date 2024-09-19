@@ -10,7 +10,7 @@ import Construction from './Construction'
 function Layout({sanityData}) {
   return (
     <div>
-      <Banner />
+      <Banner sanityData={sanityData} />
       <LauchPlaces sanityData={sanityData} />
       <Construction sanityData={sanityData} />
       <Company sanityData={sanityData} />

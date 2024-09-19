@@ -20,6 +20,17 @@ export default function App({ Component, pageProps, sanityData }) {
 
 App.getInitialProps = async () => {
   const query = `*[_type == "home"][0]{
+
+  banner{
+    head {
+      heading,
+      location
+    }, 
+    small_description,  
+    "bannerImage": bannerImage.asset->url,
+  },
+ 
+
   construction {
     head {
       heading,

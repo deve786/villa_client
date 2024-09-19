@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 function Contact({ sanityData }) {
-    console.log(sanityData);
+    // console.log(sanityData);
 
     return (
         <div id="contact-section" className="md:p-8 p-3 md:py-32 py-16 grid gap-10 lg:grid-cols-2 lg:gap-16">
