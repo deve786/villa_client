@@ -23,19 +23,21 @@ function Navbar() {
   };
 
   return (
-    <nav className="text-black p-4 md:px-16 px-4 z-40 relative flex flex-col">
+    <nav className="text-black  md:px-16 px-4 z-40 relative flex flex-col">
       <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <Image src="/logo.png" quality={100} priority unoptimized layout='fill' alt="Logo" className="md:!h-12 md:!w-12 !static !w-8 !h-8" />
-          <Link href='#'>
-            <div className="flex flex-col leading-3">
-              <p className="uppercase md:text-xl text-lg font-extrabold">Absolute</p>
-              <p className="uppercase md:text-xxs text-[10px] font-semibold">
-                Builder and Developers (P) LTD
-              </p>
+        <Link href='#'>
+          <div className="flex items-center space-x-3">
+            <Image src="/logo1.png" quality={100} priority unoptimized layout='fill' alt="Logo" className="md:!h-14 md:!w-20 !static !w-8 !h-8" />
+            <div  className='!ml-0'>
+              <div className="flex flex-col leading-3">
+                <p className="uppercase md:text-xl text-lg font-[900]">Absolute</p>
+                <p className="uppercase md:text-xxs text-[10px] font-bold">
+                  Builder and Developers (P) LTD
+                </p>
+              </div>
             </div>
-          </Link>
-        </div>
+          </div>
+        </Link>
 
 
         <div className="text-gray-400 hidden md:flex space-x-8 justify-end">
