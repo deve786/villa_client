@@ -18,17 +18,17 @@ function Banner({ sanityData }) {
 
     return (
         <>
-            <Navbar />
+           
             <div className="relative h-screen flex">
-            <div
-      className={`
+                <div
+                    className={`
         w-full
         flex justify-between lg:justify-start items-center bg-[#E35925]
         p-3 lg:p-20
         ${isMobile ? 'bg-cover bg-center' : 'lg:w-[70%]'}
       `}
-      style={isMobile ? { bannerImageUrl: `url(${bannerImageUrl})` } : {}}
-    >
+                    style={isMobile ? { bannerImageUrl: `url(${bannerImageUrl})` } : {}}
+                >
                     <div className="max-w-2xl">
                         <h1 className="lg:text-black text-white md:text-6xl text-5xl font-semibold mb-4">
                             {sanityData?.banner?.head?.heading} <span className="text-black lg:text-white">{sanityData?.banner?.head?.location}</span>
@@ -85,7 +85,7 @@ function Banner({ sanityData }) {
                 </div>
 
                 <div className="bg-[#3A6DB4] w-[30%] relative hidden lg:flex">
-                  <div className="hidden lg:flex absolute top-1/2 right-0 transform -translate-y-1/2 -translate-x-1/3 w-[120%] h-4/5 rounded-3xl overflow-hidden shadow-xl">
+                    <div className="hidden lg:flex absolute top-1/2 right-0 transform -translate-y-1/2 -translate-x-1/3 w-[120%] h-4/5 rounded-3xl overflow-hidden shadow-xl">
                         <Image
                             src="/banner-image.png"
                             alt="Construction workers"

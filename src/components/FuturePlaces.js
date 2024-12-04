@@ -1,14 +1,16 @@
 import Image from 'next/image'
 import React from 'react'
 
-function Construction({ sanityData }) {
+function futureconstruction({ sanityData }) {
+    console.log(sanityData);
+
     return (
         <div className='bg-gray-100 gap-10 p-5 py-10 md:p-10 flex flex-col md:flex-row justify-center md:justify-between'>
             {/* Image Section */}
             <div className='relative flex flex-col md:justify-center mb-5 w-full md:w-1/2'>
                 <div className="relative w-full h-[300px] md:h-[500px] lg:h-[600px]">
                     <Image
-                        src={sanityData?.construction?.bannerImage}
+                        src={sanityData?.futureconstruction?.bannerImage}
                         fill
                         alt="Rectangle"
                         className="object-cover"
@@ -21,11 +23,11 @@ function Construction({ sanityData }) {
             <div className='flex items-center justify-start md:justify-start text-black md:text-left w-full md:w-1/2'>
                 <div className='flex justify-center flex-col gap-2 md:gap-4 w-full '>
                     <h1 className="text-3xl md:text-5xl font-semibold flex flex-col">
-                        <span>{sanityData?.construction?.head?.heading}</span>
-                        <span className='text-blue-400'>{sanityData?.construction?.head?.location}</span>
+                        <span>{sanityData?.futureconstruction?.head?.heading}</span>
+                        <span className='text-blue-400'>{sanityData?.futureconstruction?.head?.location}</span>
                     </h1>
                     <ul className='flex flex-col gap-3'>
-                        {Array.isArray(sanityData?.construction?.description) && sanityData?.construction?.description.map((item, index) => (
+                        {Array.isArray(sanityData?.futureconstruction?.description) && sanityData?.futureconstruction?.description.map((item, index) => (
                             <li key={index} className='flex gap-1 items-center md:text-lg text-md font-semibold'>
                                 <i className="fa-solid fa-circle text-sm text-blue-400"></i>{item}
                             </li>
@@ -41,4 +43,4 @@ function Construction({ sanityData }) {
     )
 }
 
-export default Construction
+export default futureconstruction

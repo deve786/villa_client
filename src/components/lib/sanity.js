@@ -9,11 +9,11 @@ function getCurrentDate() {
 }
 
 const client = createClient({
-  projectId: "woxcbquj",
+  projectId: "vbkevby9",
   dataset: "production",
   apiVersion: getCurrentDate(),
   token:
-    "skkK88aVHSUkl4ZjYpoiyU6yY6oeiHK2ZY5R9pLzBf1DBI2Pq26b2ir2TGXZdcbrAMHOkaGBP0ER79GRnzXy6Ajq4g3AXgc5Yslxi1mFH8SnlzylCi2p0BcfBxXxkuxo1iXVLY76z7JPJWeq4biWxtB9iOXw5W5A4AFNbd7tt438nNXVQEy9",
+  "sk1ooje2i5KFAIwPBWrqLbJSCPfyGMMJMwCiB31h2Wz4aU0t64rFni8TS0nrkV4TkMK9rfu9uIJBwsxnD7H2XIvVEhD5Z6Gg7iTOvuJsZUbspX3589jdi2liXifUZ2oi0IAyKpxV5BmT7QTvSkQAUxuO10OnXlb9J1dqFdA8PUsvKw7RvJE9",
   useCdn: true,
 });
 

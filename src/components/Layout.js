@@ -6,18 +6,21 @@ import Review from './Review'
 import Contact from './Contact'
 import Footer from './Footer'
 import Construction from './Construction'
+import ContactUs from '@/pages/contactUs'
+import Navbar from './Navbar'
+import Head from 'next/head'
 
-function Layout({sanityData}) {
+function Layout({children}) {
   return (
-    <div>
-      <Banner sanityData={sanityData} />
-      <LauchPlaces sanityData={sanityData} />
-      <Construction sanityData={sanityData} />
-      <Company sanityData={sanityData} />
-      <Review sanityData={sanityData} />
-      <Contact sanityData={sanityData} />
-      <Footer/>
-    </div>
+    <>
+      <Head>
+        <title>Villa</title>
+      </Head>
+      <div>
+        <Navbar/>
+        {children}
+      </div>
+    </>
   )
 }
 

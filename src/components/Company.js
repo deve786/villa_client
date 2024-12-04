@@ -16,7 +16,7 @@ function Company({ sanityData }) {
                     </div>
                 </div>
             </div>
-            <div className='bg-gray-100  md:py-10 md:px-4 py-4 items-center justify-center flex md:gap-24 gap-2 text-gray-500'>
+            {/* <div className='bg-gray-100  md:py-10 md:px-4 py-4 items-center justify-center flex md:gap-24 gap-2 text-gray-500'>
                 <div className='flex gap-2 items-center'>
                     <Image src="/project.png" layout='fill' className='!static md:!w-14 !w-8' />
                     <div className='flex flex-col leading-3'>
@@ -40,7 +40,7 @@ function Company({ sanityData }) {
                         <p className='md:font-semibold md:text-md text-sm leading-3'>Award Won</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
