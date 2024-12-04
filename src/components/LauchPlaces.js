@@ -39,27 +39,37 @@ function LauchPlaces({ sanityData }) {
                 sanityData?.villas.map((villaData, index) =>
                     <div key={index} className="relative pb-10 gap-5 px-5 md:px-10 flex lg:flex-row flex-col md:flex-row justify-center md:justify-between z-10">
                         <div className='relative flex flex-col md:justify-center mb-5 w-full md:w-1/2'>
-                            <div className="lg:absolute inset-0 md:justify-center mb-5">
+                            <div className="relative w-full h-[300px] md:h-[500px] lg:h-[600px]">
                                 <Image
                                     src={villaData?.bannerImage}
                                     fill
                                     alt="Rectangle"
-                                    className="object-contain !static md:!w-[100%] !h-[100%]"
+                                    className="object-cover"
                                 />
-                                <div className="absolute translate-x-1/2 translate-y-0 inset-0 w-32 h-16 md:w-40 md:h-40 z-20 flex items-center justify-center">
-                                    <Image src="/Medallions.png" fill alt="Medallions" className="object-contain !static md:!w-[100%] md:!h-full !w-60 !h-24" />
-                                    <div className='absolute text-white text-center'>
-                                        <p className='font-semibold md:text-lg text-[12px]'>{villaData?.price}</p>
-                                        <p className='md:text-lg text-[10px]'>Onwards</p>
+                                <div className="absolute top-4 right-4 md:top-6 md:right-6 z-20">
+                                    <div className="relative w-16 h-16 md:w-40 md:h-40">
+                                        <Image
+                                            src="/Medallions.png"
+                                            fill
+                                            alt="Medallions"
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <div className="text-white text-center">
+                                            <p className="font-semibold md:text-lg text-[12px]">{villaData?.price}</p>
+                                            <p className="md:text-lg text-[10px]">Onwards</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
                         <div className='flex items-center justify-start md:justify-start text-black md:text-left w-full md:w-1/2'>
                             <div className='flex justify-center flex-col gap-2 md:gap-4 w-full'>
-                                <h1 className="text-3xl md:text-5xl font-semibold w-2/3">
-                                    {villaData?.head?.heading}
+                                <h1 className="text-3xl md:text-4xl font-semibold w-2/3 flex flex-col">
+                                    <span>{villaData?.head?.heading}</span>
                                     <span className='text-blue-400'>{villaData?.head?.location}</span>
                                 </h1>
                                 <p className='text-sm md:text-lg'>{villaData?.subhead}</p>
@@ -95,13 +105,13 @@ function LauchPlaces({ sanityData }) {
                                         {Array.isArray(villaData?.exterior) && villaData.exterior.map((image) => (
                                             <Image key={image.id} src={image.url} layout="responsive" width={100} height={100} alt={image.alt} className=' !h-auto max-w-full !relative !w-24' />
                                         ))}
-                                        
+
                                     </div>
                                     <div id={`interior-section-${index}`} className="hidden  flex-wrap gap-2">
                                         {Array.isArray(villaData?.interior) && villaData.interior.map((image) => (
                                             <Image key={image.id} src={image.url} layout="responsive" width={100} height={100} alt={image.alt} className=' !h-auto max-w-full !relative !w-24' />
                                         ))}
-                                        
+
                                     </div>
                                 </div>
                             </div>
